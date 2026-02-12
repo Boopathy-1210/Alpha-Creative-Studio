@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #1b211a;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#NavLogo{
+    height: 50px;
+}
+
+#NavBar {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 60%;     
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+    background-color: #1b211a;
+    z-index: 1000;
+}
+
+
+#NavLists {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.NavItems{
+    position: relative;
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+.NavItems::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: #628141;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.NavItems:hover::after {
+  width: 100%;
+  color: #628141;
+}
+
+#AboutImage{
+    width: 600px;
+}
+
+#AboutContext{
+    display: flex;
+    padding-top: 120px;
+    flex: 1;
+}
+
+#AboutContainer{
+    color: #F5F5F5;
+        font-family: "Poppins", sans-serif;
+    width: 850px;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 20px;
+}
+
+#AboutTitle{
+    color: #EBD5AB;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-style: normal;
+    margin-bottom: 20px;
+}
+
+#slogan{
+    margin: 20px 0px;
+    letter-spacing: 2px;
+}
+
+.AboutContent{
+    letter-spacing: 1px;
+    line-height: 26px;
+}
+
+#Footer{
+    position: relative;
+    background-color: #EBD5AB;
+    height: 30px;
+}

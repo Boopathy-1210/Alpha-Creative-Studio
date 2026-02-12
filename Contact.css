@@ -1,0 +1,156 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1b211a;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#NavLogo {
+    height: 50px;
+}
+
+#NavBar {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 60%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0 40px;
+    background-color: #1b211a;
+    z-index: 1000;
+}
+
+#NavLists {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.NavItems {
+    position: relative;
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+.NavItems::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #628141;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.NavItems:hover::after {
+    width: 100%;
+}
+
+#ContactTitle {
+    margin-top: 120px;
+    text-align: center;
+    color: #EBD5AB;
+}
+
+#ContactTitle p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+
+#ContactSection {
+    flex: 1;
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    gap: 50px;
+}
+
+
+.ContactInfo {
+    flex: 1;
+    padding: 40px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    color: #F5F5F5;
+}
+
+.ContactInfo h2 {
+    color: #EBD5AB;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    margin-bottom: 25px;
+}
+
+
+.ContactForm {
+    flex: 1;
+    padding: 40px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: #628141;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #4e6a33;
+}
+
+
+#Footer {
+    background-color: #EBD5AB;
+    height: 20px;
+    width: 100%;
+}

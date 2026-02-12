@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1b211a;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#NavLogo {
+    height: 50px;
+}
+
+#NavBar {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 60%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0 40px;
+    background-color: #1b211a;
+    z-index: 1000;
+}
+
+#NavLists {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.NavItems {
+    position: relative;
+    font-weight: 400;
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+.NavItems::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #628141;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.NavItems:hover::after {
+    width: 100%;
+}
+
+
+#Title {
+    margin-top: 65px;
+    text-align: center;
+    color: #EBD5AB;
+    letter-spacing: 4px;
+}
+
+#CouserelContext {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+    padding: 20px 0;
+}
+
+
+.carousel-container {
+    width: 80%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.team-card {
+    min-width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: scale(1.02);
+}
+
+
+#ContentImage {
+    flex-shrink: 0;
+}
+
+.AboutImage {
+    width: 320px;
+    border-radius: 20px;
+}
+
+
+.AboutContainer {
+    color: #F5F5F5;
+    flex: 1;
+}
+
+.AboutTitle {
+    color: #EBD5AB;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.slogan {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.AboutContent {
+    line-height: 25px;
+    letter-spacing: 0.5px;
+}
+
+.PreButton,
+.NextButton {
+    width: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev,
+.Next {
+    width: 35px;
+    transition: 0.3s;
+}
+
+.prev:hover,
+.Next:hover {
+    transform: scale(1.2);
+}
+
+#Footer {
+    background-color: #EBD5AB;
+    height: 30px;
+    width: 100%;
+}
