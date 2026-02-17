@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1b211a;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#NavBar {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 60%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 40px;
+    background-color: #1b211a;
+    z-index: 1000;
+}
+
+#NavLogo{
+    height: 50px;
+}
+
+#NavLists {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.NavItems{
+    position: relative;
+    font-weight: 400;
+    color: #F5F5F5;
+    text-decoration: none;
+}
+
+.NavItems::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #628141;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.NavItems:hover::after {
+    width: 100%;
+}
+
+#MenuToggle{
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+
+#AboutContext{
+    display: flex;
+    padding-top: 120px;
+    flex: 1;
+    align-items: center;
+}
+
+#AboutImage{
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+}
+
+#AboutContainer{
+    color: #F5F5F5;
+    width: 850px;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding: 20px;
+}
+
+#AboutTitle{
+    color: #EBD5AB;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+#slogan{
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+.AboutContent{
+    letter-spacing: 1px;
+    line-height: 26px;
+}
+
+
+#Footer{
+    background-color: #EBD5AB;
+    height: 30px;
+}
+
+
+@media (max-width: 1024px){
+
+    #NavBar{
+width:100%;
+top:0;
+justify-content:space-between;
+padding:0 20px;
+height:70px;
+}
+
+#NavLists{
+position:absolute;
+top:70px;
+right:20px;
+width:220px;
+background:#222822;
+flex-direction:column;
+gap:20px;
+padding:20px;
+border-radius:12px;
+display:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+#NavLists.active{
+display:flex;
+}
+
+#MenuToggle{
+display:block;
+}
+
+
+    #AboutContext{
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 20px 40px 20px;
+    }
+
+    #AboutContainer{
+        width: 100%;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,189 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    height:100%;
+}
+
+body{
+    background:#1b211a;
+    font-family:"Poppins",sans-serif;
+    display:flex;
+    flex-direction:column;
+}
+
+
+#NavBar{
+    position:fixed;
+    top:20px;
+    left:0;
+    width:60%;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:0 40px;
+    background:#1b211a;
+    z-index:1000;
+}
+
+#NavLogo{
+    height:50px;
+}
+
+#NavLists{
+    display:flex;
+    gap:50px;
+    list-style:none;
+}
+
+.NavItems{
+    position:relative;
+    font-weight:400;
+    color:#F5F5F5;
+    text-decoration:none;
+}
+
+.NavItems::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:3px;
+    background:#628141;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.NavItems:hover::after{
+    width:100%;
+}
+
+#MenuToggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+
+.MainWrapper{
+    flex:1;
+    padding-top:140px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+#ContactTitle{
+    text-align:center;
+    color:#EBD5AB;
+    margin-bottom:20px;
+}
+
+#ContactTitle p{
+    color:#ccc;
+}
+
+#ContactSection{
+    width:80%;
+    margin:0 auto;
+    display:flex;
+    gap:40px;
+}
+
+.ContactInfo,
+.ContactForm{
+    flex:1;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+}
+
+.ContactInfo{ color:#F5F5F5; }
+
+.ContactInfo h2{
+    color:#EBD5AB;
+    margin-bottom:20px;
+}
+
+.info-item{ margin-bottom:18px; }
+
+.form-group{ margin-bottom:15px; }
+
+input,textarea{
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    font-family:"Poppins",sans-serif;
+}
+
+textarea{ resize:none; }
+
+.submit-btn{
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+    border:none;
+    background:#628141;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:#4e6a33;
+}
+
+#Footer{
+    background:#EBD5AB;
+    height:40px;
+}
+
+
+@media(max-width:1024px){
+
+#NavBar{
+    width:100%;
+    top:0;
+    justify-content:space-between;
+    padding:0 20px;
+    height:70px;
+}
+
+#NavLists{
+    position:absolute;
+    top:70px;
+    right:20px;
+    width:220px;
+    background:#222822;
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+    border-radius:12px;
+    display:none;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+#NavLists.active{
+    display:flex;
+}
+
+#MenuToggle{
+    display:block;
+}
+
+#ContactSection{
+    flex-direction:column;
+    width:90%;
+    gap:25px;
+}
+
+}

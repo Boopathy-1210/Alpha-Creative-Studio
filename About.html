@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./Assests/Home/whiteLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./About.css">
+    <link rel="shortcut icon" href="./Assests/About/AbountImg.png" type="image/x-icon">
+
+    <title>Alpha Creation</title>
+</head>
+
+<body>
+
+<header id="NavBar">
+    <img src="./Assests/Home/whiteLogo.png" alt="Alpha creation" id="NavLogo">
+
+    <nav>
+        <ul id="NavLists">
+            <li><a href="./index.html" class="NavItems">Home</a></li>
+            <li><a href="./About.html" class="NavItems">About</a></li>
+            <li><a href="./Services.html" class="NavItems">Services</a></li>
+            <li><a href="./Teams.html" class="NavItems">Our Team</a></li>
+            <li><a href="./ContactUs.html" class="NavItems">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="MenuToggle">&#9776;</div>
+</header>
+
+<main id="AboutContext">
+
+    <div id="ContentImage">
+        <img src="./Assests/About/AbountImg.png" 
+             alt="Alpha Creation Studio" 
+             id="AboutImage">
+    </div>
+
+    <div id="AboutContainer">
+        <h1 id="AboutTitle">ALPHA CREATIVE STUDIO</h1>
+
+        <h3 id="slogan">MOMENTS INTO MEMORIES</h3>
+
+        <p class="AboutContent">
+            ALPHA CREATIVE STUDIO IS A PROFESSIONAL PHOTOGRAPHY, VIDEOGRAPHY, AND CREATIVE
+            MEDIA STUDIO DEDICATED TO CAPTURING LIFE'S MOST MEANINGFUL MOMENTS WITH
+            PRECISION AND PASSION. WE SPECIALIZE IN TRADITIONAL AND CANDID PHOTOGRAPHY &
+            VIDEOGRAPHY, BLENDING TIMELESS TECHNIQUES WITH A MODERN STORYTELLING APPROACH.
+            <br><br>
+            FROM WEDDINGS AND RECEPTIONS TO PRODUCT SHOOTS, HOUSEWARMING CEREMONIES,
+            MATERNITY SESSIONS, AND BABY SHOWERS, WE ENSURE EVERY EVENT IS DOCUMENTED WITH
+            CREATIVITY, CLARITY, AND EMOTION. OUR TEAM FOCUSES ON BOTH POSED PERFECTION AND
+            NATURAL, UNSCRIPTED MOMENTS TO DELIVER A COMPLETE VISUAL STORY.
+            <br><br>
+            IN ADDITION TO PHOTOGRAPHY AND VIDEOGRAPHY, WE ALSO PROVIDE CUSTOMIZED
+            PHOTO FRAMES AND PREMIUM ALBUMS, CAREFULLY DESIGNED TO PRESERVE YOUR
+            MEMORIES IN A TIMELESS AND ELEGANT FORM.
+            <br><br>
+            WE ALSO PROVIDE A FULLY EQUIPPED STUDIO RENTAL SPACE, IDEAL FOR PHOTOSHOOTS,
+            PRODUCT SHOOTS, CONTENT CREATION, AND CREATIVE PROJECTS.
+        </p>
+    </div>
+
+</main>
+
+<footer id="Footer"></footer>
+
+<script>
+    const menu = document.getElementById("MenuToggle");
+    const navList = document.getElementById("NavLists");
+
+    menu.addEventListener("click", () => {
+        navList.classList.toggle("active");
+    });
+</script>
+
+</body>
+</html>

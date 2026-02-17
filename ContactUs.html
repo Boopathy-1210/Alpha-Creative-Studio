@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./Assests/Home/whiteLogo.png" type="image/x-icon">
+<link rel="stylesheet" href="./ContactUs.css" />
+<title>Contact Us | Alpha Creative Studio</title>
+</head>
+
+<body>
+
+<header id="NavBar">
+    <img src="./Assests/Home/whiteLogo.png" alt="Alpha creation" id="NavLogo" />
+
+    <nav>
+        <ul id="NavLists">
+            <li><a href="./index.html" class="NavItems">Home</a></li>
+            <li><a href="./About.html" class="NavItems">About</a></li>
+            <li><a href="./Services.html" class="NavItems">Services</a></li>
+            <li><a href="./Teams.html" class="NavItems">Our Team</a></li>
+            <li><a href="./ContactUs.html" class="NavItems">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="MenuToggle">&#9776;</div>
+</header>
+
+<main class="MainWrapper">
+
+<section id="ContactTitle">
+  <h1>CONTACT US</h1>
+  <p>Let’s create something beautiful together.</p>
+</section>
+
+<section id="ContactSection">
+
+  <div class="ContactInfo">
+    <h2>Get In Touch</h2>
+
+    <div class="info-item">
+      <h4>📍 Location</h4>
+      <p>NO.47, SUBRAMANIYAM NAGAR, VADAVALLI,
+      COIMBATORE - 641046</p>
+    </div>
+
+    <div class="info-item">
+      <h4>📞 Phone</h4>
+      <p>+91 78689 01674</p>
+    </div>
+
+    <div class="info-item">
+      <h4>✉ Email</h4>
+      <p>alphacreativestudios45@gmail.com</p>
+    </div>
+
+    <div class="info-item">
+      <h4>🕒 Working Hours</h4>
+      <p>Mon – Sun : 9:00 AM – 9:00 PM</p>
+    </div>
+  </div>
+
+  <div class="ContactForm">
+  <form id="whatsappForm">
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Your Name" required />
+    </div>
+
+    <div class="form-group">
+      <input type="email" id="email" placeholder="Your Email" required />
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="subject" placeholder="Event Type (Wedding / Engagement / etc)" />
+    </div>
+
+    <div class="form-group">
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">Book via WhatsApp</button>
+  </form>
+</div>
+
+</section>
+
+</main>
+
+<footer id="Footer"></footer>
+
+<script>
+const menu = document.getElementById("MenuToggle");
+const navList = document.getElementById("NavLists");
+
+menu.addEventListener("click", () => {
+  navList.classList.toggle("active");
+});
+
+
+
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
+
+  const phoneNumber = "917868901674"; 
+
+  const whatsappMessage = 
+`Hello Alpha Creative Studio 👋
+
+📌 Booking Request Details:
+
+👤 Name: ${name}
+📧 Email: ${email}
+🎉 Event Type: ${subject}
+📝 Message: ${message}
+
+I would like to book a slot. Please share availability.`;
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+window.location.href = url;
+});
+</script>
+
+
+</body>
+</html>

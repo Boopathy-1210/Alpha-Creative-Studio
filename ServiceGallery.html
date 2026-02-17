@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ServiceGallery.css">
+<link rel="shortcut icon" href="./Assests/Home/whiteLogo.png" type="image/x-icon">
+<title>Gallery</title>
+</head>
+<body>
+
+<header id="NavBar">
+    <img src="./Assests/Home/whiteLogo.png" id="NavLogo">
+
+    <nav>
+        <ul id="NavLists">
+            <li><a href="./index.html" class="NavItems">Home</a></li>
+            <li><a href="./About.html" class="NavItems">About</a></li>
+            <li><a href="./Services.html" class="NavItems">Services</a></li>
+            <li><a href="./Teams.html" class="NavItems">Our Team</a></li>
+            <li><a href="./ContactUs.html" class="NavItems">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="MenuToggle">&#9776;</div>
+</header>
+
+<main class="GalleryPage">
+
+    <h1 id="GalleryTitle"></h1>
+    <div id="GalleryContainer"></div>
+
+</main>
+
+<div class="BottomStrip"></div>
+
+<script>
+
+const menu = document.getElementById("MenuToggle");
+const navList = document.getElementById("NavLists");
+
+menu.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
+
+const params = new URLSearchParams(window.location.search);
+const type = params.get("type");
+
+const title = document.getElementById("GalleryTitle");
+const container = document.getElementById("GalleryContainer");
+
+if(type === "candid-photo"){
+    title.innerText = "CANDID PHOTOGRAPHY";
+    container.className = "PhotoGrid";
+    container.innerHTML = `
+        <img src="./Assests/Gallery/candid1.jpg">
+        <img src="./Assests/Gallery/candid2.jpg">
+        <img src="./Assests/Gallery/candid3.jpg">
+        <img src="./Assests/Gallery/candid4.jpg">
+        <img src="./Assests/Gallery/candid5.jpg">
+        <img src="./Assests/Gallery/candid6.jpg">
+    `;
+}
+
+if(type === "traditional-photo"){
+    title.innerText = "TRADITIONAL PHOTOGRAPHY";
+    container.className = "PhotoGrid";
+    container.innerHTML = `
+        <img src="./Assests/Gallery/traditional1.jpg">
+        <img src="./Assests/Gallery/traditional2.jpg">
+        <img src="./Assests/Gallery/traditional3.jpg">
+        <img src="./Assests/Gallery/traditional4.jpg">
+        <img src="./Assests/Gallery/traditional5.jpg">
+        <img src="./Assests/Gallery/traditional6.jpg">
+    `;
+}
+
+if(type === "candid-video"){
+    title.innerText = "CANDID VIDEOGRAPHY";
+    container.className = "VideoGrid";
+    container.innerHTML = `
+        <video autoplay muted loop playsinline>
+            <source src="./Assests/Gallery/Candidvideo1.mp4" type="video/webm">
+        </video>
+        <video autoplay muted loop playsinline>
+            <source src="./Assests/Gallery/Candidvideo2.mp4" type="video/mp4">
+        </video>
+    `;
+}
+
+if(type === "traditional-video"){
+    title.innerText = "TRADITIONAL VIDEOGRAPHY";
+    container.className = "VideoGrid";
+    container.innerHTML = `
+        <video autoplay muted loop playsinline>
+            <source src="./Assests/Gallery/traditionalvideo1.mp4" type="video/webm">
+        </video>
+        <video autoplay muted loop playsinline>
+            <source src="./Assests/Gallery/traditionalvideo2.mp4" type="video/webm">
+        </video>
+    `;
+}
+
+</script>
+
+</body>
+</html>

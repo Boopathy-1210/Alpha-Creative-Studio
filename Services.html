@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./Assests/Home/whiteLogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Services.css">
+    <link rel="shortcut icon" href="./Assests/About/AbountImg.png" type="image/x-icon">
+
+    <title>Alpha Creation</title>
+</head>
+<body>
+
+<header id="NavBar">
+    <img src="./Assests/Home/whiteLogo.png" alt="Alpha creation" id="NavLogo">
+
+    <nav>
+        <ul id="NavLists">
+            <li><a href="./index.html" class="NavItems">Home</a></li>
+            <li><a href="./About.html" class="NavItems">About</a></li>
+            <li><a href="./Services.html" class="NavItems">Services</a></li>
+            <li><a href="./Teams.html" class="NavItems">Our Team</a></li>
+            <li><a href="./ContactUs.html" class="NavItems">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="MenuToggle">&#9776;</div>
+</header>
+
+<main class="PageContent">
+
+    <section class="HeroSection">
+        <h1>ALPHA CREATIVE STUDIO</h1>
+        <h2>Moments Into Memories</h2>
+        <h3>We Specialize In</h3>
+    </section>
+
+    <section class="ServicesSection">
+
+        <div class="ServiceCard">
+    <a href="servicegallery.html?type=traditional-photo">
+        <img src="./Assests/Services/Traditional.jpg">
+    </a>
+    <h4>TRADITIONAL PHOTOGRAPHY</h4>
+</div>
+
+<div class="ServiceCard">
+    <a href="servicegallery.html?type=candid-photo">
+        <img src="./Assests/Services/Candid.jpg">
+    </a>
+    <h4>CANDID PHOTOGRAPHY</h4>
+</div>
+
+<div class="ServiceCard">
+    <a href="servicegallery.html?type=traditional-video">
+        <img src="./Assests/Services/Traditional Videography.jpg">
+    </a>
+    <h4>TRADITIONAL VIDEOGRAPHY</h4>
+</div>
+
+<div class="ServiceCard">
+    <a href="servicegallery.html?type=candid-video">
+        <img src="./Assests/Services/Candid Videgraphy.jpg">
+    </a>
+    <h4>CANDID VIDEOGRAPHY</h4>
+</div>
+
+
+    </section>
+
+    <div class="BottomStrip"></div>
+
+</main>
+
+<script>
+const menu = document.getElementById("MenuToggle");
+const navList = document.getElementById("NavLists");
+menu.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>

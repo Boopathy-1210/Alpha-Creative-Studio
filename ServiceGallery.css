@@ -1,0 +1,185 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:#1b211a;
+    font-family:"Poppins",sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    color:white;
+}
+
+
+#NavBar{
+    position:fixed;
+    top:20px;
+    left:0;
+    width:60%;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:0 40px;
+    background-color:#1b211a;
+    z-index:1000;
+}
+
+#NavLogo{
+    height:50px;
+}
+
+#NavLists{
+    display:flex;
+    gap:50px;
+    list-style:none;
+}
+
+.NavItems{
+    position:relative;
+    font-weight:400;
+    color:#F5F5F5;
+    text-decoration:none;
+}
+
+.NavItems::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:3px;
+    background:#628141;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.NavItems:hover::after{
+    width:100%;
+}
+
+#MenuToggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+
+.GalleryPage{
+    padding-top:80px;
+    padding-left:60px;
+    padding-right:60px;
+    text-align:center;
+    flex:1;
+}
+
+#GalleryTitle{
+    color:#EBD5AB;
+    font-size:36px;
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+
+.PhotoGrid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.PhotoGrid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:6px;
+    transition:0.3s ease;
+}
+
+.PhotoGrid img:hover{
+    transform:scale(1.03);
+}
+
+
+.VideoGrid{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.VideoGrid video{
+    width:600px;
+    max-width:100%;
+    border-radius:6px;
+    object-fit:cover;
+}
+
+
+.BottomStrip{
+    height:45px;
+    background:#EBD5AB;
+    width:100%;
+}
+
+
+@media(max-width:1024px){
+
+    #NavBar{
+        width:100%;
+        top:0;
+        justify-content:space-between;
+        padding:0 20px;
+        height:70px;
+    }
+
+    #NavLists{
+        position:absolute;
+        top:70px;
+        right:20px;
+        width:220px;
+        background:#222822;
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+        border-radius:12px;
+        display:none;
+        box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    #NavLists.active{
+        display:flex;
+    }
+
+    #MenuToggle{
+        display:block;
+    }
+
+    .PhotoGrid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .VideoGrid video{
+        width:100%;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .PhotoGrid{
+        grid-template-columns:1fr;
+    }
+
+    .GalleryPage{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    #GalleryTitle{
+        font-size:24px;
+    }
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./Assests/Home/whiteLogo.png" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+<title>Alpha Creation</title>
+</head>
+
+<body>
+
+<header id="NavBar">
+<img src="./Assests/Home/whiteLogo.png" id="NavLogo">
+<nav>
+<ul id="NavLists">
+<li><a href="./index.html" class="NavItems">Home</a></li>
+<li><a href="./About.html" class="NavItems">About</a></li>
+<li><a href="./Services.html" class="NavItems">Services</a></li>
+<li><a href="./Teams.html" class="NavItems">Our Team</a></li>
+<li><a href="./ContactUs.html" class="NavItems">Contact Us</a></li>
+</ul>
+</nav>
+<div id="MenuToggle">&#9776;</div>
+</header>
+
+<main class="hero">
+
+<div class="hero-left">
+<h1>ALPHA CREATIVE STUDIO</h1>
+<h3>CAPTURING STORIES BEYOND FRAMES</h3>
+<p>
+Alpha Creative Studio is a complete creative photography and digital media destination,
+offering professional services across weddings, events, and brands.
+</p>
+<p>
+We specialize in wedding photography & cinematography, capturing emotions and timeless
+memories that last forever.
+</p>
+<a href="./ContactUs.html" class="book-btn">BOOK YOUR EVENT</a>
+</div>
+
+<div class="hero-right">
+<div class="slider">
+<div class="slide active"><img src="./Assests/Gallery/candid1.jpg"></div>
+<div class="slide"><img src="./Assests/Gallery/candid2.jpg"></div>
+<div class="slide"><img src="./Assests/Gallery/candid3.jpg"></div>
+<div class="slide"><img src="./Assests/Gallery/traditional3.jpg"></div>
+<div class="slide"><img src="./Assests/Gallery/traditional5.jpg"></div>
+<div class="slide"><img src="./Assests/Gallery/traditional6.jpg"></div>
+</div>
+</div>
+
+</main>
+
+<footer id="Footer"></footer>
+
+<script>
+const slides=document.querySelectorAll(".slide");
+let index=0;
+setInterval(()=>{
+slides[index].classList.remove("active");
+index=(index+1)%slides.length;
+slides[index].classList.add("active");
+},3000);
+
+const menu=document.getElementById("MenuToggle");
+const navList=document.getElementById("NavLists");
+menu.addEventListener("click",()=>{
+navList.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>

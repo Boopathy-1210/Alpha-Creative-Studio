@@ -1,0 +1,198 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:#1b211a;
+    font-family:"Poppins",sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+
+#NavBar{
+    position:fixed;
+    top:20px;
+    left:0;
+    width:60%;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:0 40px;
+    background-color:#1b211a;
+    z-index:1000;
+}
+
+#NavLogo{
+    height:50px;
+}
+
+#NavLists{
+    display:flex;
+    gap:50px;
+    list-style:none;
+}
+
+.NavItems{
+    position:relative;
+    font-weight:400;
+    color:#F5F5F5;
+    text-decoration:none;
+}
+
+.NavItems::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:3px;
+    background:#628141;
+    left:0;
+    bottom:-5px;
+    transition:0.3s;
+}
+
+.NavItems:hover::after{
+    width:100%;
+}
+
+#MenuToggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+
+.PageContent{
+    padding-top:120px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+
+.HeroSection{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.HeroSection h1{
+    font-size:42px;
+    letter-spacing:5px;
+    color:#EBD5AB;
+}
+
+.HeroSection h2{
+    color:#F5F5F5;
+    margin-top:12px;
+    font-weight:500;
+}
+
+.HeroSection h3{
+    color:#F5F5F5;
+    margin-top:8px;
+    font-weight:400;
+}
+
+
+.ServicesSection{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:70px;
+    flex-wrap:wrap;
+    padding:20px 60px;
+}
+
+.ServiceCard{
+    text-align:center;
+    max-width:260px;
+}
+
+.ServiceCard img{
+    width:230px;
+    height:230px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #2c3a28;
+    transition:0.3s;
+}
+
+.ServiceCard img:hover{
+    transform:scale(1.05);
+}
+
+.ServiceCard h4{
+    margin-top:25px;
+    color:#F5F5F5;
+    letter-spacing:1px;
+    font-size:16px;
+}
+
+.ServiceCard p{
+    margin-top:12px;
+    font-size:14px;
+    color:#ccc;
+    line-height:22px;
+}
+
+
+.BottomStrip{
+    margin-top:40px;
+    height:35px;
+    background:#EBD5AB;
+}
+
+
+@media (max-width:1024px){
+
+    #NavBar{
+        width:100%;
+        top:0;
+        justify-content:space-between;
+        padding:0 20px;
+        height:70px;
+    }
+
+    #NavLists{
+        position:absolute;
+        top:70px;
+        right:20px;
+        width:220px;
+        background:#222822;
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+        border-radius:12px;
+        display:none;
+        box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    #NavLists.active{
+        display:flex;
+    }
+
+    #MenuToggle{
+        display:block;
+    }
+
+    .HeroSection h1{
+        font-size:28px;
+    }
+
+    .ServicesSection{
+        gap:50px;
+        padding:20px;
+    }
+
+    .ServiceCard img{
+        width:190px;
+        height:190px;
+    }
+
+}
